@@ -16,33 +16,73 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Group {
-                Text(!user.isLoggedIn ? "Welcome Page!" : "Welcome \(user.username)!")
-                    .font(.title)
-                
-                Spacer()
-                
-                Button(action: {
-                    if !user.isLoggedIn {
-                        showLogin = true
-                    } else {
-                        user.logout()
+            
+            Text(!user.isLoggedIn ? "Welcome Page!" : "Welcome \(user.username)!")
+                .font(.title)
+            
+            
+            if true {
+                Form {
+                    Section {
+                        VStack {
+                            Text("Color Theme")
+                            Picker("", selection: $user.colorTheme) {
+                                Text("Light").tag(0)
+                                Text("Dark").tag(1)
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
+                            .accessibilityIdentifier("colorTheme")
+                        }
                     }
-                }, label: {
-                    Text(!user.isLoggedIn ? "Login" : "Logout")
-                }).accessibilityIdentifier("loginButton")
-                
+                    
+                    Section {
+                        HStack {
+                            Text("Text Size")
+                            Slider(value: $user.textSize, in: 1...100)
+                                .accessibilityIdentifier("slider")
+                        }
+                    }
+                    
+                    Section {
+                        VStack {
+                            Text("Font")
+                            Picker("", selection: $user.font) {
+                                Text("Arial").tag("Arial")
+                                Text("Avenir Next").tag("Avenir Next")
+                                Text("Noteworthy").tag("Noteworthy")
+                                Text("Futura").tag("Futura")
+                            }
+                            .pickerStyle(WheelPickerStyle())
+                            .accessibilityIdentifier("fontPicker")
+                        }
+                    }
+                }.cornerRadius(16)
+            }
+            
+            Button(action: {
                 if !user.isLoggedIn {
-                    Button {
-                        showRegister = true
-                    } label: {
-                        Text("Register")
-                    }.accessibilityIdentifier("registerButton")
+                    showLogin = true
+                } else {
+                    user.logout()
                 }
-                
-                Spacer()
-                
-            }.padding()
+            }, label: {
+                Text(!user.isLoggedIn ? "Login" : "Logout")
+            })
+            .padding()
+            .accessibilityIdentifier("loginButton")
+            
+            if !user.isLoggedIn {
+                Button {
+                    showRegister = true
+                } label: {
+                    Text("Register")
+                }
+                .padding()
+                .accessibilityIdentifier("registerButton")
+            }
+            
+            Spacer()
+            
             
         }
         .sheet(isPresented: $showLogin, content: { LoginView() })
