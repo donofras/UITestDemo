@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct TestDemoApp: App {
+    
+    var user = UserModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(user)
         }
     }
 }

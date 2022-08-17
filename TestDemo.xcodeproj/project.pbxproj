@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93623FD428AD310B0040C3A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93623FD328AD310B0040C3A3 /* LoginView.swift */; };
+		93623FD628AD31130040C3A3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93623FD528AD31130040C3A3 /* RegisterView.swift */; };
 		93D6877A28ACE4260079FDF3 /* TestDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6877928ACE4260079FDF3 /* TestDemoApp.swift */; };
 		93D6877C28ACE4260079FDF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6877B28ACE4260079FDF3 /* ContentView.swift */; };
 		93D6877E28ACE4260079FDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D6877D28ACE4260079FDF3 /* Assets.xcassets */; };
@@ -14,6 +16,10 @@
 		93D6878B28ACE4260079FDF3 /* TestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6878A28ACE4260079FDF3 /* TestDemoTests.swift */; };
 		93D6879528ACE4260079FDF3 /* TestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6879428ACE4260079FDF3 /* TestDemoUITests.swift */; };
 		93D6879728ACE4260079FDF3 /* TestDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D6879628ACE4260079FDF3 /* TestDemoUITestsLaunchTests.swift */; };
+		93D687A428ACE9BC0079FDF3 /* WelcomePageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D687A328ACE9BC0079FDF3 /* WelcomePageUITests.swift */; };
+		93D687A628ACEC940079FDF3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D687A528ACEC940079FDF3 /* UserModel.swift */; };
+		93D687A828ACF3870079FDF3 /* LoginPageUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D687A728ACF3870079FDF3 /* LoginPageUITest.swift */; };
+		93D687AA28ACF3950079FDF3 /* RegisterPageUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D687A928ACF3950079FDF3 /* RegisterPageUITest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93623FD328AD310B0040C3A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		93623FD528AD31130040C3A3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		93D6877628ACE4260079FDF3 /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D6877928ACE4260079FDF3 /* TestDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoApp.swift; sourceTree = "<group>"; };
 		93D6877B28ACE4260079FDF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +52,10 @@
 		93D6879028ACE4260079FDF3 /* TestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D6879428ACE4260079FDF3 /* TestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoUITests.swift; sourceTree = "<group>"; };
 		93D6879628ACE4260079FDF3 /* TestDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93D687A328ACE9BC0079FDF3 /* WelcomePageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageUITests.swift; sourceTree = "<group>"; };
+		93D687A528ACEC940079FDF3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		93D687A728ACF3870079FDF3 /* LoginPageUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITest.swift; sourceTree = "<group>"; };
+		93D687A928ACF3950079FDF3 /* RegisterPageUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageUITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,9 @@
 			children = (
 				93D6877928ACE4260079FDF3 /* TestDemoApp.swift */,
 				93D6877B28ACE4260079FDF3 /* ContentView.swift */,
+				93623FD528AD31130040C3A3 /* RegisterView.swift */,
+				93623FD328AD310B0040C3A3 /* LoginView.swift */,
+				93D687A528ACEC940079FDF3 /* UserModel.swift */,
 				93D6877D28ACE4260079FDF3 /* Assets.xcassets */,
 				93D6877F28ACE4260079FDF3 /* Preview Content */,
 			);
@@ -123,6 +138,9 @@
 			children = (
 				93D6879428ACE4260079FDF3 /* TestDemoUITests.swift */,
 				93D6879628ACE4260079FDF3 /* TestDemoUITestsLaunchTests.swift */,
+				93D687A328ACE9BC0079FDF3 /* WelcomePageUITests.swift */,
+				93D687A728ACF3870079FDF3 /* LoginPageUITest.swift */,
+				93D687A928ACF3950079FDF3 /* RegisterPageUITest.swift */,
 			);
 			path = TestDemoUITests;
 			sourceTree = "<group>";
@@ -258,6 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D6877C28ACE4260079FDF3 /* ContentView.swift in Sources */,
+				93623FD628AD31130040C3A3 /* RegisterView.swift in Sources */,
+				93D687A628ACEC940079FDF3 /* UserModel.swift in Sources */,
+				93623FD428AD310B0040C3A3 /* LoginView.swift in Sources */,
 				93D6877A28ACE4260079FDF3 /* TestDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D687A828ACF3870079FDF3 /* LoginPageUITest.swift in Sources */,
 				93D6879728ACE4260079FDF3 /* TestDemoUITestsLaunchTests.swift in Sources */,
+				93D687AA28ACF3950079FDF3 /* RegisterPageUITest.swift in Sources */,
+				93D687A428ACE9BC0079FDF3 /* WelcomePageUITests.swift in Sources */,
 				93D6879528ACE4260079FDF3 /* TestDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +458,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +487,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
