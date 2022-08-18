@@ -21,7 +21,7 @@ struct ContentView: View {
                 .font(.title)
             
             
-            if true {
+            if user.isLoggedIn {
                 Form {
                     Section {
                         VStack {

@@ -15,7 +15,7 @@ class RegisterPageUITest: XCTestCase {
         continueAfterFailure = false
         
         app.launch()
-        app.buttons["loginButton"].tap()
+        app.buttons["registerButton"].tap()
     }
 
     override func tearDownWithError() throws {

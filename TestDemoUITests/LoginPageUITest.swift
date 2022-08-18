@@ -76,13 +76,13 @@ class LoginPageUITest: XCTestCase {
         let loginButton = app.buttons["loginNowButton"]
         loginButton.tap()
 
-        XCTAssertFalse(loginButton.waitForExistence(timeout: 0.5))
+        XCTAssertFalse(loginButton.waitForExistence(timeout: 1.0))
     }
     
     func testFailedLoginAlert() throws {
         app.buttons["loginNowButton"].tap()
 
-        XCTAssert(app.alerts.element.waitForExistence(timeout: 0.5))
+        XCTAssert(app.alerts.element.waitForExistence(timeout: 1.0))
 
         app.alerts.element.buttons["OK"].tap()
         XCTAssertFalse(app.alerts.element.exists)

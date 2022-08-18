@@ -57,20 +57,56 @@ class WelcomePageUITests: XCTestCase {
     func testWelcomeAfterLogin() throws {
         XCTAssert(app.staticTexts["Welcome Page!"].exists)
      
+        try login()
+     
+        XCTAssert(app.staticTexts["Welcome test!"].exists)
+    }
+
+    func testTextSize() throws {
+        try login()
+     
+        let textSize = app.sliders["slider"]
+        XCTAssert(textSize.exists)
+     
+        textSize.adjust(toNormalizedSliderPosition: 0.75)
+        XCTAssertGreaterThanOrEqual(textSize.value as! String, "0.7")
+    }
+    
+    func testColorTheme() throws {
+        try login()
+
+        let colorTheme = app.segmentedControls["colorTheme"]
+        XCTAssert(colorTheme.exists)
+        XCTAssert(colorTheme.buttons["Light"].isSelected)
+
+        colorTheme.buttons["Dark"].tap()
+        XCTAssert(colorTheme.buttons["Dark"].isSelected)
+    }
+    
+    func testFontPicker() throws {
+        try login()
+     
+        let wheel = app.pickers["fontPicker"].pickerWheels.element
+        XCTAssert(wheel.exists)
+        XCTAssertEqual(wheel.value as! String, "Arial")
+     
+        wheel.adjust(toPickerWheelValue: "Futura")
+        XCTAssertEqual(wheel.value as! String, "Futura")
+    }
+    
+    private func login() throws {
         app.buttons["loginButton"].tap()
         
         let username = app.textFields["Username"]
         username.tap()
         username.typeText("test")
-
+        
         let password = app.secureTextFields["Password"]
         password.tap()
         password.typeText("pass")
         app.keyboards.buttons["Return"].tap()
-
+        
         let loginButton = app.buttons["loginNowButton"]
         loginButton.tap()
-     
-        XCTAssert(app.staticTexts["Welcome test!"].exists)
     }
 }
